@@ -17,7 +17,7 @@ Responsável por:
 
 - Ler automaticamente arquivos XML em uma pasta configurada  
 - Interpretar tags principais (emitente, destinatário, produtos, pagamentos etc.)  
-- Tratar XMLs da NFe 4.00 com namespace  
+- Tratar XMLs da NFe 4.00  
 - Estruturar as informações usando arquitetura **MVC**  
 - Enviar os dados extraídos ao servidor Delphi para validação e substituição  
 
@@ -48,38 +48,42 @@ Responsável por:
 
 ## **Arquitetura do Projeto Python**
 
+```
 xml_processor/
 │
 ├── controllers/
-│ └── xml_controller.py # Coordena leitura e processos externos
+│   └── xml_controller.py
 │
 ├── services/
-│ ├── xml_reader.py # Leitura e parse dos XMLs
-│ └── xml_utils.py # Funções utilitárias para XML
+│   ├── xml_reader.py
+│   └── xml_utils.py
 │
 ├── models/
-│ └── nfe_models.py # Estruturas de domínio (NFe, Produtos etc.)
+│   └── nfe_models.py
 │
-└── main.py # Ponto de execução e testes locais
+└── main.py
+```
 
 ---
 
 ## **Arquitetura do Projeto Delphi**
 
+```
 DelphiApp/
 │
 ├── Controllers/
-│ └── MainController.pas
+│   └── MainController.pas
 │
 ├── Models/
 │
 ├── Services/
-│ ├── ConnectionService.pas
+│   └── ConnectionService.pas
 │
 ├── Views/
-│ └── MainForm.pas
+│   └── MainForm.pas
 │
 └── DelphiApp.dpr
+```
 
 ### **O servidor Delphi:**
 
@@ -114,15 +118,15 @@ DelphiApp/
 
 1. Clone o repositório:
 
-git clone https://github.com/Chicosk1/FormatadorXML
+ - git clone https://github.com/Chicosk1/FormatadorXML
 
 2. Entre na pasta:
 
-cd formatador-xml/xml_processor
+ - cd formatador-xml/xml_processor
 
 3. Execute o script principal:
 
-python main.py
+ - python main.py
 
 
 4. Escolha uma pasta com XMLs válidos da NFe 4.00.
@@ -143,8 +147,8 @@ python main.py
 - Estrutura modular e extensível  
 - Separação clara de responsabilidades  
 - Fácil manutenção  
-- Fácil inclusão de novos campos (ICMS, PIS, COFINS etc.)  
-- Integração direta com banco Oracle  
+- Fácil inclusão de novos campos
+- Integração direta com banco de dados  
 - Processo automatizado para reescrita do XML  
 - Fluxo limpo entre leitura, validação e substituição  
 
@@ -154,16 +158,6 @@ python main.py
 
 - Implementar cache de consultas para melhorar performance  
 - Tratar XMLs rejeitados ou incompletos  
-- Criar interface visual Delphi mais completa  
 - Adicionar logs estruturados  
 - Criar testes unitários e testes integrados  
-- Suporte ao CT-e e MDF-e  
-
----
-
-## **Licença**
-
-Este projeto é de uso interno.  
-Distribuição externa não é autorizada.
-
----
+- Suporte ao CT-e e MDF-e
