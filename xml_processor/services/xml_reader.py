@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 from services.xml_utils import get, get_list
-from models.xml_model import Produto, NotaFiscal
+from xml_processor.models.nfe_model import Produto, NotaFiscal
 
 def parse_produto(node):
     prod_node = node.find("nfe:prod", {"nfe": "http://www.portalfiscal.inf.br/nfe"})
