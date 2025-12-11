@@ -1,0 +1,98 @@
+unit MainForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages,
+  System.SysUtils, System.Variants, System.Classes, System.Types, System.IniFiles,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Grids, Vcl.StdCtrls,
+  MainController;
+
+type
+  TFormatadorXML = class(TForm)
+    pnlPrincipal : TPanel;
+    edtCaminho   : TEdit;
+    lblXmlFolders: TLabel;
+    btnSelecionar: TButton;
+    btnCarregar  : TButton;
+    lstArquivos  : TListBox;
+    StringGrid1  : TStringGrid;
+    procedure btnCarregarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    FController: TXmlController;
+    function  CarregarCaminho: string;
+    procedure SalvarCaminho(const Caminho: string);
+    procedure PreencherListaArquivos(const Arquivos: TStringDynArray);
+  public
+  end;
+
+var
+  FormatadorXML: TFormatadorXML;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormatadorXML.btnCarregarClick(Sender: TObject);
+var
+  Caminho: string;
+  Arquivos: TStringDynArray;
+  A: string;
+begin
+  Caminho := Trim(edtCaminho.Text);
+  Arquivos := FController.CarregarPasta(Caminho);
+
+  SalvarCaminho(Caminho);
+
+
+  lstArquivos.Clear;
+
+  for A in Arquivos do
+    lstArquivos.Items.Add(ExtractFileName(A));
+end;
+
+function TFormatadorXML.CarregarCaminho: string;
+var
+  Ini: TIniFile;
+begin
+  Ini := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
+  try
+    Result := Ini.ReadString('Config', 'UltimaPasta', '');
+    edtCaminho.Text := Caminho;
+  finally
+    Ini.Free;
+  end;
+end;
+
+procedure TFormatadorXML.FormCreate(Sender: TObject);
+begin
+  FController := TXmlController.Create;
+  CarregarCaminho;
+end;
+
+procedure TFormatadorXML.FormDestroy(Sender: TObject);
+begin
+  FController.Free;
+end;
+
+procedure TFormatadorXML.PreencherListaArquivos(
+  const Arquivos: TStringDynArray);
+begin
+
+end;
+
+procedure TFormatadorXML.SalvarCaminho(const Caminho: string);
+var
+  Ini: TIniFile;
+begin
+  Ini := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
+  try
+    Ini.WriteString('Config', 'UltimaPasta', Caminho);
+  finally
+    Ini.Free;
+  end;
+end;
+
+end.

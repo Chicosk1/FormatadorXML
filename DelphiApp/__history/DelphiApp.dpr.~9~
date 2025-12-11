@@ -1,0 +1,17 @@
+program DelphiApp;
+
+uses
+  Vcl.Forms,
+  MainForm in 'View\MainForm.pas' {Form1},
+  ConnectionService in 'Services\ConnectionService.pas',
+  MainController in 'Controllers\MainController.pas',
+  ConfigService in 'Services\ConfigService.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

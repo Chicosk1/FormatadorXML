@@ -2,6 +2,30 @@ unit MainController;
 
 interface
 
+uses
+  System.SysUtils, System.Types, System.IOUtils, System.Generics.Collections;
+
+type
+  TXmlController = class
+  public
+    function CarregarPasta(const APasta: string): TStringDynArray;
+  end;
+
 implementation
+
+{ TXmlController }
+
+function TXmlController.CarregarPasta(const APasta: string): TStringDynArray;
+var
+  Arquivos: TStringDynArray;
+begin
+  if not TDirectory.Exists(APasta) then
+    raise Exception.Create('Pasta inválida.');
+
+  // Filtra apenas .xml
+  Arquivos := TDirectory.GetFiles(APasta, '*.xml', TSearchOption.soTopDirectoryOnly);
+
+  Result := Arquivos;
+end;
 
 end.

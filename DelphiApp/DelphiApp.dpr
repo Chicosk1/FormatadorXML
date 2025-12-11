@@ -3,14 +3,18 @@ program DelphiApp;
 uses
   Vcl.Forms,
   MainForm in 'View\MainForm.pas' {Form1},
+  ConnectionService in 'Services\ConnectionService.pas',
   MainController in 'Controllers\MainController.pas',
-  ConnectionService in 'Services\ConnectionService.pas';
+  ConfigService in 'Services\ConfigService.pas',
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  TStyleManager.TrySetStyle('Sapphire Kamri');
+  Application.CreateForm(TFormatadorXML, FormatadorXML);
   Application.Run;
 end.

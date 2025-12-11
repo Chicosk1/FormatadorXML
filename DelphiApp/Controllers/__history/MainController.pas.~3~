@@ -1,0 +1,16 @@
+unit MainController;
+
+interface
+
+uses
+  System.SysUtils, System.IOUtils, System.Generics.Collections;
+
+type
+  TXmlController = class
+  public
+    function CarregarPasta(const APasta: string): TArray<string>;
+  end;
+
+implementation
+
+end.

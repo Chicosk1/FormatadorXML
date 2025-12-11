@@ -1,0 +1,19 @@
+program DelphiApp;
+
+uses
+  Vcl.Forms,
+  MainForm in 'View\MainForm.pas' {Form1},
+  MainController in 'Controllers\MainController.pas',
+  ConnectionService in 'Services\ConnectionService.pas',
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Amethyst Kamri');
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

@@ -2,8 +2,8 @@ object FormatadorXML: TFormatadorXML
   Left = 0
   Top = 0
   Caption = 'Formatador XML'
-  ClientHeight = 233
-  ClientWidth = 595
+  ClientHeight = 242
+  ClientWidth = 655
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,58 +11,61 @@ object FormatadorXML: TFormatadorXML
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13
-  object pnlPrincipal: TPanel
+  object pnlBackGround: TPanel
     Left = 0
     Top = 0
-    Width = 595
-    Height = 233
+    Width = 655
+    Height = 242
     Align = alClient
     TabOrder = 0
-    object lblXmlFolders: TLabel
-      Left = 8
+    object lblCaminho: TLabel
+      Left = 16
       Top = 8
-      Width = 71
+      Width = 145
       Height = 13
-      Caption = 'Pasta de XML'#39's'
+      Caption = 'Caminho das Pastas dos XML'#39's'
     end
-    object edtXmlFolders: TEdit
-      Left = 8
+    object edtCaminho: TEdit
+      Left = 16
       Top = 24
-      Width = 249
+      Width = 281
       Height = 21
       TabOrder = 0
     end
-    object btnSelecionarPasta: TButton
-      Left = 263
+    object btnCarregar: TButton
+      Left = 303
       Top = 22
-      Width = 98
+      Width = 82
+      Height = 25
+      Caption = 'Carregar XML'
+      TabOrder = 1
+      OnClick = btnCarregarClick
+    end
+    object btnSelecionar: TButton
+      Left = 391
+      Top = 22
+      Width = 97
       Height = 25
       Caption = 'Selecionar Pasta'
-      TabOrder = 1
-    end
-    object btnCarregarXML: TButton
-      Left = 367
-      Top = 22
-      Width = 81
-      Height = 25
-      Caption = 'CarregarXML'
       TabOrder = 2
     end
-    object lstXML: TListBox
-      Left = 8
+    object lstArquivos: TListBox
+      Left = 16
       Top = 51
-      Width = 249
-      Height = 174
+      Width = 281
+      Height = 182
       ItemHeight = 13
       TabOrder = 3
     end
     object StringGrid1: TStringGrid
-      Left = 263
+      Left = 303
       Top = 51
-      Width = 327
-      Height = 174
+      Width = 345
+      Height = 182
       TabOrder = 4
       ColWidths = (
         64

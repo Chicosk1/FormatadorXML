@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{264AC2F4-7449-479A-9A87-7C56F3B9C8FF}</ProjectGuid>
+        <ProjectGuid>{6C0813CF-3BB0-40FF-936E-F1761074E667}</ProjectGuid>
         <ProjectVersion>18.2</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <MainSource>DelphiApp.dpr</MainSource>
@@ -46,11 +46,12 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
-        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <Custom_Styles>&quot;Sapphire Kamri|VCLSTYLE|$(BDSCOMMONDIR)\Styles\SapphireKamri.vsf&quot;</Custom_Styles>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
-        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <SanitizedProjectName>DelphiApp</SanitizedProjectName>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
@@ -60,13 +61,13 @@
         <DCC_K>false</DCC_K>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <DCC_UsePackage>DBXSqliteDriver;dxSpreadSheetConditionalFormattingDialogsRS24;dxFlowChartAdvancedCustomizeFormRS24;DBXDb2Driver;vquery240;dxPSDBTeeChartRS24;dxPSdxGaugeControlLnkRS24;vclactnband;dxSpreadSheetRS24;vclFireDAC;dxDockingRS24;ViasoftVclTb97_XE5;tethering;cxGridEMFRS24;dxPScxTLLnkRS24;dxBarExtItemsRS24;FireDACADSDriver;dxFireDACServerModeRS24;JvPluginSystem;cxSchedulerWebServiceStorageRS24;dxPSTeeChartRS24;ACBr_BPe;FireDACMSSQLDriver;vcltouch;JvBands;ACBr_NFe;vcldb;Intraweb;svn;JvJans;ViasoftVclPRN_XE5;ACBr_PAFNFCe;dacfmx240;JvDotNetCtrls;TMSScripter_Memo;rbTC2124;dxGDIPlusRS24;dxCloudServiceLibraryRS24;dxADOServerModeRS24;dxPSdxDBTVLnkRS24;dxPSdxChartControlLnkRS24;vclib;dclRBADO2124;rbTCUI2124;ViasoftVclRTF_XE5;crcontrols240;ViasoftDataControls;ACBr_OFX;office2K;FireDACDBXDriver;dxNavBarRS24;vclx;cxTreeListRS24;ACBr_NFCom;DbxDevartOracleDriver240;cxIBXAdaptersRS24;dxtrmdRS24;GMLibEdit_DXE101;dxRichEditControlCoreRS24;ACBr_GTIN;RESTBackendComponents;dxRibbonRS24;ACBr_Reinf;VCLRESTComponents;rbIDE2124;cxExportRS24;cxTreeListdxBarPopupMenuRS24;cxPivotGridChartRS24;DbxDevartInterBaseDriver240;ViasoftUtilsBase_XE5;remotedb;vclie;dxTabbedMDIRS24;bindengine;CloudService;dxADOEMFRS24;JvHMI;FireDACMySQLDriver;ViasoftVclEstab_XE5;cxPivotGridOLAPRS24;dxChartControlRS24;ACBr_PAF;ACBr_SATECFVirtual;DataSnapClient;dxPSLnksRS24;ViasoftCTB_XE5;bindcompdbx;rbTDBC2124;ViasoftVclDTeditor_XE5;ACBr_TCP;DBXSybaseASEDriver;IndyIPServer;ACBr_CTe;sparkle;tmsbcl;IndySystem;dxCoreRS24;rbCIDE2124;GMLib_DXE101;ACBr_PagFor;dsnapcon;ViasoftVclDB_XE5;dxEMFRS24;ViasoftLib;ACBre_Social;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;rbADO2124;Jcl;ACBr_SPEDImportar;ACBr_SPED;ACBr_MDFe;emshosting;rbBDE2124;dxBarDBNavRS24;ACBr_LFD;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxPScxExtCommonRS24;dxPSdxLCLnkRS24;soaprtl;DbxCommonDriver;dxOrgChartAdvancedCustomizeFormRS24;dxPScxPivotGridLnkRS24;JvManagedThreads;ACBrBaaS;ACBr_CIOT;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;JvTimeFramework;dxGanttControlRS24;rtl;TMSScripter_IDE;DbxClientDriver;cxGridRS24;DBXSybaseASADriver;dxSpellCheckerRS24;JvSystem;JvStdCtrls;cxLibraryRS24;ACBr_Convenio115;appanalytics;dxSkinsCoreRS24;dxDBXServerModeRS24;ACBr_DebitoAutomatico;dxMapControlRS24;IndyIPClient;bindcompvcl;dxPSdxMapControlLnkRS24;rbCloudSC2124;TeeUI;dxPsPrVwAdvRS24;rbDAD2124;JvDocking;JvPascalInterpreter;VclSmp;rbRCL2124;VCLTMSFNCCorePkgDXE10;FireDACODBCDriver;dxRichEditDocumentModelRS24;cxSchedulerRibbonStyleEventEditorRS24;JclVcl;DataSnapIndy10ServerTransport;aurelius;dxPSPrVwRibbonRS24;dxSpreadSheetReportDesignerRS24;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;JvControls;JvPrintPreview;dxdborRS24;dxHttpIndyRequestRS24;DataSnapServerMidas;RESTComponents;dxmdsRS24;cxSchedulerGridRS24;cxPivotGridRS24;DBXInterBaseDriver;TMSLogging;ViasoftVclCobranca_XE5;ACBr_NF3e;ACBr_TEFD;emsclientfiredac;ACBr_SATWS;DataSnapFireDAC;svnui;JvGlobus;rbIBE2124;dxdbtrRS24;rbRIDE2124;dxPScxPCProdRS24;DBXMSSQLDriver;JvMM;TMSScripter;DatasnapConnectorsFreePascal;unidacfmx240;PngComponentsD;CPortLibD240;dxWizardControlRS24;ViasoftVclControls_XE5;ACBr_EDI;bindcompfmx;JvNet;dxBarExtDBItemsRS24;DBXOracleDriver;madSecurity_;unidacvcl240;inetdb;JvAppFrm;cxSchedulerTreeBrowserRS24;dxPSdxOCLnkRS24;dxPSdxFCLnkRS24;ACBr_Diversos;ACBr_ONE;cxADOAdaptersRS24;FmxTeeUI;emsedge;unidac240;FireDACIBDriver;fmx;fmxdae;ACBr_LCDPR;StyledAnimatedComponents;ZipMasterR;JvWizards;ACBr_Ponto;dbexpress;IndyCore;dxSpreadSheetCoreRS24;GXDBGrid_Berlin;xdata;dxTileControlRS24;JvPageComps;dsnap;DataSnapCommon;emsclient;dxPSdxSpreadSheetLnkRS24;FireDACCommon;TicketFrete_XE5;bdertl;JvDB;ViasoftVclFormControls_XE5;ACBr_NFSeX;DataSnapConnectors;ACBr_DCe;ACBR_DeSTDA;Skia.Package.VCL;soapserver;ACBr_SAT;TMSScripter_Legacy;dac240;JclDeveloperTools;dxBarRS24;TMSScripter_VCL;dclRBFireDAC2124;FireDACOracleDriver;DBXMySQLDriver;madKernel_;JvCmp;dxPSRichEditControlLnkRS24;DBXFirebirdDriver;dxPScxCommonRS24;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;dxPSdxPDFViewerLnkRS24;ViasoftUtilsUtils_XE5;LockBoxDR;ViasoftUtilsFunc_XE5;inet;ACBr_ADRCST;ACBr_GNRE;IndyIPCommon;JvCustom;rbDBE2124;vcl;JvXPCtrls;ViasoftVclCompDlg_XE5;dxPSdxDBOCLnkRS24;FireDACDb2Driver;ACBr_Integrador;madExcept_;VisioForge_VideoCapture_Package;madBasic_;TeeDB;FireDAC;dxPScxVGridLnkRS24;dxPScxGridLnkRS24;JvCore;dxSpreadSheetCoreConditionalFormattingDialogsRS24;dxFlowChartLayoutsRS24;madShell_;StyledComponents;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;ACBr_Comum;dxServerModeRS24;JvDlgs;JvRuntimeDesign;ibxpress;Tee;dacvcl240;DataSnapServer;ibxbindings;cxFireDACAdaptersRS24;dxRichEditCoreRS24;cxSchedulerRS24;vclwinx;FireDACDSDriver;ViasoftGPFin_XE5;madDisAsm_;dxPSCoreRS24;ViasoftVclAgro240;ACBr_OpenSSL;CustomIPTransport;vcldsnap;dxPScxSchedulerLnkRS24;dxRibbonCustomizationFormRS24;ACBr_PIXCD;bindcomp;ACBr_Serial;DBXInformixDriver;dxorgcRS24;dxPDFViewerRS24;Skia.Package.RTL;dclRBDBE2124;rbUSER2124;rbRAP2124;rbDIDE2124;ACBr_BlocoX;dxRichEditControlRS24;dbxcds;ACBr_NFCeECFVirtual;adortl;rbDB2124;dxComnRS24;cxVerticalGridRS24;dclRBE2124;dxFlowChartRS24;dxFireDACEMFRS24;ACBr_ANe;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;VCLTMSFNCMapsPkgDXE10;dxGaugeControlRS24;JclContainers;dxFlowChartDesignerRS24;dclRBIBE2124;ACBr_MTER;rbFireDAC2124;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <BT_BuildType>Debug</BT_BuildType>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_UsePackage>DBXSqliteDriver;dxSpreadSheetConditionalFormattingDialogsRS24;dxFlowChartAdvancedCustomizeFormRS24;DBXDb2Driver;vquery240;dxPSDBTeeChartRS24;dxPSdxGaugeControlLnkRS24;vclactnband;dxSpreadSheetRS24;vclFireDAC;dxDockingRS24;ViasoftVclTb97_XE5;tethering;cxGridEMFRS24;dxPScxTLLnkRS24;dxBarExtItemsRS24;FireDACADSDriver;dxFireDACServerModeRS24;JvPluginSystem;cxSchedulerWebServiceStorageRS24;dxPSTeeChartRS24;ACBr_BPe;FireDACMSSQLDriver;vcltouch;JvBands;ACBr_NFe;vcldb;Intraweb;svn;JvJans;ViasoftVclPRN_XE5;ACBr_PAFNFCe;dacfmx240;JvDotNetCtrls;TMSScripter_Memo;rbTC2124;dxGDIPlusRS24;dxCloudServiceLibraryRS24;dxADOServerModeRS24;dxPSdxDBTVLnkRS24;dxPSdxChartControlLnkRS24;vclib;dclRBADO2124;rbTCUI2124;ViasoftVclRTF_XE5;crcontrols240;ViasoftDataControls;ACBr_OFX;office2K;FireDACDBXDriver;dxNavBarRS24;vclx;cxTreeListRS24;ACBr_NFCom;DbxDevartOracleDriver240;cxIBXAdaptersRS24;dxtrmdRS24;GMLibEdit_DXE101;dxRichEditControlCoreRS24;ACBr_GTIN;RESTBackendComponents;dxRibbonRS24;ACBr_Reinf;VCLRESTComponents;rbIDE2124;cxExportRS24;cxTreeListdxBarPopupMenuRS24;cxPivotGridChartRS24;DbxDevartInterBaseDriver240;ViasoftUtilsBase_XE5;remotedb;vclie;dxTabbedMDIRS24;bindengine;CloudService;dxADOEMFRS24;JvHMI;FireDACMySQLDriver;ViasoftVclEstab_XE5;cxPivotGridOLAPRS24;dxChartControlRS24;ACBr_PAF;ACBr_SATECFVirtual;DataSnapClient;dxPSLnksRS24;ViasoftCTB_XE5;bindcompdbx;rbTDBC2124;ViasoftVclDTeditor_XE5;ACBr_TCP;DBXSybaseASEDriver;IndyIPServer;ACBr_CTe;sparkle;tmsbcl;IndySystem;dxCoreRS24;rbCIDE2124;GMLib_DXE101;ACBr_PagFor;dsnapcon;ViasoftVclDB_XE5;dxEMFRS24;ViasoftLib;ACBre_Social;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;rbADO2124;Jcl;ACBr_SPEDImportar;ACBr_SPED;ACBr_MDFe;emshosting;rbBDE2124;dxBarDBNavRS24;ACBr_LFD;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxPScxExtCommonRS24;dxPSdxLCLnkRS24;soaprtl;DbxCommonDriver;dxOrgChartAdvancedCustomizeFormRS24;dxPScxPivotGridLnkRS24;JvManagedThreads;ACBrBaaS;ACBr_CIOT;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;JvTimeFramework;dxGanttControlRS24;rtl;TMSScripter_IDE;DbxClientDriver;cxGridRS24;DBXSybaseASADriver;dxSpellCheckerRS24;JvSystem;JvStdCtrls;cxLibraryRS24;ACBr_Convenio115;appanalytics;dxSkinsCoreRS24;dxDBXServerModeRS24;ACBr_DebitoAutomatico;dxMapControlRS24;IndyIPClient;bindcompvcl;dxPSdxMapControlLnkRS24;rbCloudSC2124;TeeUI;dxPsPrVwAdvRS24;rbDAD2124;JvDocking;JvPascalInterpreter;VclSmp;rbRCL2124;VCLTMSFNCCorePkgDXE10;FireDACODBCDriver;dxRichEditDocumentModelRS24;cxSchedulerRibbonStyleEventEditorRS24;JclVcl;DataSnapIndy10ServerTransport;aurelius;dxPSPrVwRibbonRS24;dxSpreadSheetReportDesignerRS24;ACBr_Boleto;DataSnapProviderClient;ACBr_SEF2;FireDACMongoDBDriver;JvControls;JvPrintPreview;dxdborRS24;dxHttpIndyRequestRS24;DataSnapServerMidas;RESTComponents;dxmdsRS24;cxSchedulerGridRS24;cxPivotGridRS24;DBXInterBaseDriver;TMSLogging;ViasoftVclCobranca_XE5;ACBr_NF3e;ACBr_TEFD;emsclientfiredac;ACBr_SATWS;DataSnapFireDAC;svnui;JvGlobus;rbIBE2124;dxdbtrRS24;rbRIDE2124;dxPScxPCProdRS24;DBXMSSQLDriver;JvMM;TMSScripter;DatasnapConnectorsFreePascal;unidacfmx240;PngComponentsD;CPortLibD240;dxWizardControlRS24;ViasoftVclControls_XE5;ACBr_EDI;bindcompfmx;JvNet;dxBarExtDBItemsRS24;DBXOracleDriver;madSecurity_;unidacvcl240;inetdb;JvAppFrm;cxSchedulerTreeBrowserRS24;dxPSdxOCLnkRS24;dxPSdxFCLnkRS24;ACBr_Diversos;ACBr_ONE;cxADOAdaptersRS24;FmxTeeUI;emsedge;unidac240;FireDACIBDriver;fmx;fmxdae;ACBr_LCDPR;StyledAnimatedComponents;ZipMasterR;JvWizards;ACBr_Ponto;dbexpress;IndyCore;dxSpreadSheetCoreRS24;GXDBGrid_Berlin;xdata;dxTileControlRS24;JvPageComps;dsnap;DataSnapCommon;emsclient;dxPSdxSpreadSheetLnkRS24;FireDACCommon;TicketFrete_XE5;bdertl;JvDB;ViasoftVclFormControls_XE5;ACBr_NFSeX;DataSnapConnectors;ACBr_DCe;ACBR_DeSTDA;Skia.Package.VCL;soapserver;ACBr_SAT;TMSScripter_Legacy;dac240;JclDeveloperTools;dxBarRS24;TMSScripter_VCL;dclRBFireDAC2124;FireDACOracleDriver;DBXMySQLDriver;madKernel_;JvCmp;dxPSRichEditControlLnkRS24;DBXFirebirdDriver;dxPScxCommonRS24;ACBr_Sintegra;FireDACCommonODBC;FireDACCommonDriver;dxPSdxPDFViewerLnkRS24;ViasoftUtilsUtils_XE5;LockBoxDR;ViasoftUtilsFunc_XE5;inet;ACBr_ADRCST;ACBr_GNRE;IndyIPCommon;JvCustom;rbDBE2124;vcl;JvXPCtrls;ViasoftVclCompDlg_XE5;dxPSdxDBOCLnkRS24;FireDACDb2Driver;ACBr_Integrador;madExcept_;VisioForge_VideoCapture_Package;madBasic_;TeeDB;FireDAC;dxPScxVGridLnkRS24;dxPScxGridLnkRS24;JvCore;dxSpreadSheetCoreConditionalFormattingDialogsRS24;dxFlowChartLayoutsRS24;madShell_;StyledComponents;JvCrypt;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;ACBr_Comum;dxServerModeRS24;JvDlgs;JvRuntimeDesign;ibxpress;Tee;dacvcl240;DataSnapServer;ibxbindings;cxFireDACAdaptersRS24;dxRichEditCoreRS24;cxSchedulerRS24;vclwinx;FireDACDSDriver;ViasoftGPFin_XE5;madDisAsm_;dxPSCoreRS24;ViasoftVclAgro240;ACBr_OpenSSL;CustomIPTransport;vcldsnap;dxPScxSchedulerLnkRS24;dxRibbonCustomizationFormRS24;ACBr_PIXCD;bindcomp;ACBr_Serial;DBXInformixDriver;dxorgcRS24;dxPDFViewerRS24;Skia.Package.RTL;dclRBDBE2124;rbUSER2124;rbRAP2124;rbDIDE2124;ACBr_BlocoX;dxRichEditControlRS24;dbxcds;ACBr_NFCeECFVirtual;adortl;rbDB2124;dxComnRS24;cxVerticalGridRS24;dclRBE2124;dxFlowChartRS24;dxFireDACEMFRS24;ACBr_ANe;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;VCLTMSFNCMapsPkgDXE10;dxGaugeControlRS24;JclContainers;dxFlowChartDesignerRS24;dclRBIBE2124;ACBr_MTER;rbFireDAC2124;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;dxSpreadSheetConditionalFormattingDialogsRS24;dxFlowChartAdvancedCustomizeFormRS24;DBXDb2Driver;dxPSDBTeeChartRS24;dxPSdxGaugeControlLnkRS24;vclactnband;dxSpreadSheetRS24;vclFireDAC;dxDockingRS24;tethering;cxGridEMFRS24;dxPScxTLLnkRS24;dxBarExtItemsRS24;FireDACADSDriver;dxFireDACServerModeRS24;cxSchedulerWebServiceStorageRS24;dxPSTeeChartRS24;FireDACMSSQLDriver;vcltouch;vcldb;Intraweb;TMSScripter_Memo;dxGDIPlusRS24;dxCloudServiceLibraryRS24;dxADOServerModeRS24;dxPSdxDBTVLnkRS24;dxPSdxChartControlLnkRS24;vclib;ViasoftVclRTF_XE5;ViasoftDataControls;office2K;FireDACDBXDriver;dxNavBarRS24;vclx;cxTreeListRS24;cxIBXAdaptersRS24;dxtrmdRS24;dxRichEditControlCoreRS24;RESTBackendComponents;dxRibbonRS24;VCLRESTComponents;cxExportRS24;cxTreeListdxBarPopupMenuRS24;cxPivotGridChartRS24;ViasoftUtilsBase_XE5;remotedb;vclie;dxTabbedMDIRS24;bindengine;CloudService;dxADOEMFRS24;FireDACMySQLDriver;cxPivotGridOLAPRS24;dxChartControlRS24;DataSnapClient;dxPSLnksRS24;bindcompdbx;DBXSybaseASEDriver;IndyIPServer;sparkle;tmsbcl;IndySystem;dxCoreRS24;dsnapcon;ViasoftVclDB_XE5;dxEMFRS24;ViasoftLib;FireDACMSAccDriver;fmxFireDAC;FireDACInfxDriver;vclimg;emshosting;dxBarDBNavRS24;DBXOdbcDriver;FireDACTDataDriver;FMXTee;dxPScxExtCommonRS24;dxPSdxLCLnkRS24;soaprtl;DbxCommonDriver;dxOrgChartAdvancedCustomizeFormRS24;dxPScxPivotGridLnkRS24;xmlrtl;soapmidas;DataSnapNativeClient;fmxobj;dxGanttControlRS24;rtl;TMSScripter_IDE;DbxClientDriver;cxGridRS24;DBXSybaseASADriver;dxSpellCheckerRS24;cxLibraryRS24;appanalytics;dxSkinsCoreRS24;dxDBXServerModeRS24;dxMapControlRS24;IndyIPClient;bindcompvcl;dxPSdxMapControlLnkRS24;TeeUI;dxPsPrVwAdvRS24;VclSmp;VCLTMSFNCCorePkgDXE10;FireDACODBCDriver;dxRichEditDocumentModelRS24;cxSchedulerRibbonStyleEventEditorRS24;DataSnapIndy10ServerTransport;aurelius;dxPSPrVwRibbonRS24;dxSpreadSheetReportDesignerRS24;DataSnapProviderClient;FireDACMongoDBDriver;dxdborRS24;dxHttpIndyRequestRS24;DataSnapServerMidas;RESTComponents;dxmdsRS24;cxSchedulerGridRS24;cxPivotGridRS24;DBXInterBaseDriver;TMSLogging;ViasoftVclCobranca_XE5;emsclientfiredac;DataSnapFireDAC;dxdbtrRS24;dxPScxPCProdRS24;DBXMSSQLDriver;TMSScripter;DatasnapConnectorsFreePascal;PngComponentsD;CPortLibD240;dxWizardControlRS24;ViasoftVclControls_XE5;bindcompfmx;dxBarExtDBItemsRS24;DBXOracleDriver;inetdb;cxSchedulerTreeBrowserRS24;dxPSdxOCLnkRS24;dxPSdxFCLnkRS24;cxADOAdaptersRS24;FmxTeeUI;emsedge;FireDACIBDriver;fmx;fmxdae;StyledAnimatedComponents;ZipMasterR;dbexpress;IndyCore;dxSpreadSheetCoreRS24;GXDBGrid_Berlin;xdata;dxTileControlRS24;dsnap;DataSnapCommon;emsclient;dxPSdxSpreadSheetLnkRS24;FireDACCommon;DataSnapConnectors;Skia.Package.VCL;soapserver;TMSScripter_Legacy;dxBarRS24;TMSScripter_VCL;FireDACOracleDriver;DBXMySQLDriver;dxPSRichEditControlLnkRS24;DBXFirebirdDriver;dxPScxCommonRS24;FireDACCommonODBC;FireDACCommonDriver;dxPSdxPDFViewerLnkRS24;ViasoftUtilsUtils_XE5;LockBoxDR;ViasoftUtilsFunc_XE5;inet;IndyIPCommon;vcl;ViasoftVclCompDlg_XE5;dxPSdxDBOCLnkRS24;FireDACDb2Driver;TeeDB;FireDAC;dxPScxVGridLnkRS24;dxPScxGridLnkRS24;dxSpreadSheetCoreConditionalFormattingDialogsRS24;dxFlowChartLayoutsRS24;StyledComponents;FireDACSqliteDriver;FireDACPgDriver;ibmonitor;FireDACASADriver;dxServerModeRS24;ibxpress;Tee;DataSnapServer;ibxbindings;cxFireDACAdaptersRS24;dxRichEditCoreRS24;cxSchedulerRS24;vclwinx;FireDACDSDriver;dxPSCoreRS24;ViasoftVclAgro240;CustomIPTransport;vcldsnap;dxPScxSchedulerLnkRS24;dxRibbonCustomizationFormRS24;bindcomp;DBXInformixDriver;dxorgcRS24;dxPDFViewerRS24;Skia.Package.RTL;dxRichEditControlRS24;dbxcds;adortl;dxComnRS24;cxVerticalGridRS24;dxFlowChartRS24;dxFireDACEMFRS24;dsnapxml;dbrtl;inetdbxpress;IndyProtocols;VCLTMSFNCMapsPkgDXE10;dxGaugeControlRS24;dxFlowChartDesignerRS24;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -80,8 +81,10 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppEnableHighDPI>true</AppEnableHighDPI>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -91,8 +94,8 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <AppEnableHighDPI>true</AppEnableHighDPI>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppEnableHighDPI>true</AppEnableHighDPI>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
@@ -102,8 +105,9 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Controllers\MainController.pas"/>
         <DCCReference Include="Services\ConnectionService.pas"/>
+        <DCCReference Include="Controllers\MainController.pas"/>
+        <DCCReference Include="Services\ConfigService.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -124,6 +128,13 @@
                 <Source>
                     <Source Name="MainSource">DelphiApp.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="X:\Delphi\Viasoft\Lib\ViasoftUtilsBase_XE5.bpl">0 Viasoft - Utils - Base</Excluded_Packages>
+                    <Excluded_Packages Name="X:\Delphi\Viasoft\Lib\ViasoftLib.bpl">0 Viasoft - Lib</Excluded_Packages>
+                    <Excluded_Packages Name="X:\DELPHI\Outros\EtheaDev\StyledComponents\packages\D10_1\Win32\Release\dclStyledComponentsD10_1.bpl">File X:\DELPHI\Outros\EtheaDev\StyledComponents\packages\D10_1\Win32\Release\dclStyledComponentsD10_1.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="X:\DELPHI\Outros\EtheaDev\SVGIconImageList\Packages\D10_1\Win32\Release\dclSVGIconImageList_D10_1.bpl">File X:\DELPHI\Outros\EtheaDev\SVGIconImageList\Packages\D10_1\Win32\Release\dclSVGIconImageList_D10_1.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp240.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="Win32\Debug\DelphiApp.exe" Configuration="Debug" Class="ProjectOutput">
@@ -132,27 +143,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -531,12 +527,27 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>

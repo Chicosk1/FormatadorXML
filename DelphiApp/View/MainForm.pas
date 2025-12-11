@@ -3,22 +3,29 @@ unit MainForm;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Grids, Vcl.StdCtrls;
+  Winapi.Windows, Winapi.Messages,
+  System.SysUtils, System.Variants, System.Classes, System.Types, System.IniFiles,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Grids, Vcl.StdCtrls,
+  MainController;
 
 type
   TFormatadorXML = class(TForm)
-    pnlPrincipal: TPanel;
-    edtXmlFolders: TEdit;
-    lblXmlFolders: TLabel;
-    btnSelecionarPasta: TButton;
-    btnCarregarXML: TButton;
-    lstXML: TListBox;
-    StringGrid1: TStringGrid;
+    pnlBackGround : TPanel;
+    edtCaminho    : TEdit;
+    lblCaminho    : TLabel;
+    btnSelecionar : TButton;
+    btnCarregar   : TButton;
+    lstArquivos   : TListBox;
+    StringGrid1   : TStringGrid;
+    procedure btnCarregarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
-    { Private declarations }
+    FController: TXmlController;
+    function  CarregarCaminho: string;
+    procedure SalvarCaminho(const Caminho: string);
+    procedure PreencherListaArquivos(const Arquivos: TStringDynArray);
   public
-    { Public declarations }
   end;
 
 var
@@ -28,4 +35,64 @@ implementation
 
 {$R *.dfm}
 
+procedure TFormatadorXML.btnCarregarClick(Sender: TObject);
+var
+  Caminho: string;
+  Arquivos: TStringDynArray;
+  A: string;
+begin
+  Caminho := Trim(edtCaminho.Text);
+  Arquivos := FController.CarregarPasta(Caminho);
+
+  SalvarCaminho(Caminho);
+  PreencherListaArquivos(Arquivos);
+end;
+
+function TFormatadorXML.CarregarCaminho: string;
+var
+  Ini: TIniFile;
+begin
+  Ini := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
+  try
+    Result := Ini.ReadString('Config', 'UltimaPasta', '');
+  finally
+    Ini.Free;
+  end;
+end;
+
+procedure TFormatadorXML.FormCreate(Sender: TObject);
+begin
+  FController := TXmlController.Create;
+  edtCaminho.Text := CarregarCaminho;
+end;
+
+procedure TFormatadorXML.FormDestroy(Sender: TObject);
+begin
+  FController.Free;
+end;
+
+procedure TFormatadorXML.PreencherListaArquivos(
+  const Arquivos: TStringDynArray);
+var
+  A: string;
+begin
+  lstArquivos.Clear;
+
+  for A in Arquivos do
+    lstArquivos.Items.Add(ExtractFileName(A));
+end;
+
+procedure TFormatadorXML.SalvarCaminho(const Caminho: string);
+var
+  Ini: TIniFile;
+begin
+  Ini := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
+  try
+    Ini.WriteString('Config', 'UltimaPasta', Caminho);
+  finally
+    Ini.Free;
+  end;
+end;
+
 end.
+
