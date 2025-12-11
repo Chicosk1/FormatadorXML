@@ -1,0 +1,81 @@
+object FormatadorXML: TFormatadorXML
+  Left = 0
+  Top = 0
+  Caption = 'Formatador XML'
+  ClientHeight = 233
+  ClientWidth = 595
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlPrincipal: TPanel
+    Left = 0
+    Top = 0
+    Width = 595
+    Height = 233
+    Align = alClient
+    TabOrder = 0
+    object lblXmlFolders: TLabel
+      Left = 8
+      Top = 8
+      Width = 71
+      Height = 13
+      Caption = 'Pasta de XML'#39's'
+    end
+    object edtXmlFolders: TEdit
+      Left = 8
+      Top = 24
+      Width = 249
+      Height = 21
+      TabOrder = 0
+    end
+    object btnSelecionarPasta: TButton
+      Left = 263
+      Top = 22
+      Width = 98
+      Height = 25
+      Caption = 'Selecionar Pasta'
+      TabOrder = 1
+    end
+    object btnCarregarXML: TButton
+      Left = 367
+      Top = 22
+      Width = 81
+      Height = 25
+      Caption = 'CarregarXML'
+      TabOrder = 2
+    end
+    object lstXML: TListBox
+      Left = 8
+      Top = 51
+      Width = 249
+      Height = 174
+      ItemHeight = 13
+      TabOrder = 3
+    end
+    object StringGrid1: TStringGrid
+      Left = 263
+      Top = 51
+      Width = 327
+      Height = 174
+      TabOrder = 4
+      ColWidths = (
+        64
+        64
+        64
+        64
+        64)
+      RowHeights = (
+        24
+        24
+        24
+        24
+        24)
+    end
+  end
+end
