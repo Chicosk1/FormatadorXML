@@ -11,7 +11,7 @@ uses
   Infra.PythonBridge in 'Infra\Infra.PythonBridge.pas',
   Service.GerenciadorDiretorio in 'Services\Service.GerenciadorDiretorio.pas',
   Service.ExtratorDados in 'Services\Service.ExtratorDados.pas',
-  Interfaces.LeitorConexao in 'Interfaces\Interfaces.LeitorConexao.pas',
+  Interfaces.LeitorConexoes in 'Interfaces\Interfaces.LeitorConexoes.pas',
   FormatadorXML.dxSettings in 'FormatadorXML.dxSettings.pas';
 
 {$R *.res}

@@ -12,6 +12,8 @@ object ViewPrincipal: TViewPrincipal
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 17
   object pnlTopo: TPanel
@@ -55,6 +57,7 @@ object ViewPrincipal: TViewPrincipal
           Kind = bkEllipsis
         end>
       Properties.ReadOnly = True
+      Properties.OnButtonClick = edtDiretorioXMLPropertiesButtonClick
       TabOrder = 3
       Width = 545
     end
@@ -107,27 +110,27 @@ object ViewPrincipal: TViewPrincipal
     Margins.Bottom = 10
     Align = alClient
     TabOrder = 2
-    object gridXMLsDBTableView1: TcxGridDBTableView
+    object gridXMLsDBTableView: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       ScrollbarAnnotations.CustomAnnotations = <>
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
     end
-    object gridXMLsLevel1: TcxGridLevel
-      GridView = gridXMLsDBTableView1
+    object gridXMLsLvl: TcxGridLevel
+      GridView = gridXMLsDBTableView
     end
   end
   object SkinControllerPrincipal: TdxSkinController
     SkinName = 'WXI'
-    Left = 48
-    Top = 408
+    Left = 56
+    Top = 480
   end
   object dlgSelecionarPasta: TFileOpenDialog
     FavoriteLinks = <>
     FileTypes = <>
     Options = [fdoPickFolders]
-    Left = 152
-    Top = 408
+    Left = 160
+    Top = 480
   end
 end

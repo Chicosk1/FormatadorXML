@@ -1,0 +1,30 @@
+[MEGA_HENRIQUE]
+DriverName=DevartOracleDirect
+DriverUnit=DBXDevartOracle
+DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver200.bpl
+MetaDataPackageLoader=TDBXDevartOracleMetaDataCommandFactory,DbxDevartOracleDriver200.bpl
+ProductName=DevartOracle
+GetDriverFunc=getSQLDriverORADirect
+LibraryName=dbexpoda40x64.dll
+VendorLib=dbexpoda40x64.dll
+MaxBlobSize=-1
+LocaleCode=0000
+Oracle TransIsolation=ReadCommitted
+RoleName=Normal
+LongStrings=True
+EnableBCD=false
+UseQuoteChar=False
+CharLength=0
+UseUnicode=False
+UnicodeEnvironment=False
+IPVersion=IPv4
+BlobSize=-1
+Database=192.168.90.144:30100:ORCL
+ErrorResourceFile=
+HostName=
+Password=330370080770270981721821921721821921721821921721821921721821921721821921721620580960470980760861921721821921721821921721821921721821921721821921721821120660
+User_Name=VIASOFTMERC
+Execute01=ALTER SESSION SET NLS_LANGUAGE = "BRAZILIAN PORTUGUESE"
+Execute02=ALTER SESSION SET NLS_TERRITORY = BRAZIL
+Execute03=ALTER SESSION SET NLS_DATE_FORMAT = 'MM/DD/YYYY'
+Execute04=ALTER SESSION SET NLS_NUMERIC_CHARACTERS = '.,'
