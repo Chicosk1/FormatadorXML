@@ -12,7 +12,8 @@ uses
   Service.GerenciadorDiretorio in 'Services\Service.GerenciadorDiretorio.pas',
   Service.ExtratorDados in 'Services\Service.ExtratorDados.pas',
   Interfaces.LeitorConexoes in 'Interfaces\Interfaces.LeitorConexoes.pas',
-  FormatadorXML.dxSettings in 'FormatadorXML.dxSettings.pas';
+  FormatadorXML.dxSettings in 'FormatadorXML.dxSettings.pas',
+  Infra.Criptografia in 'Infra\Infra.Criptografia.pas';
 
 {$R *.res}
 

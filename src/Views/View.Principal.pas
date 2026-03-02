@@ -9,9 +9,8 @@ uses
   dxSkinWXI, cxContainer, cxEdit, cxTextEdit, cxMaskEdit, cxDropDownEdit,
   cxButtonEdit, cxLabel, cxProgressBar, cxButtons, cxStyles, cxCustomData, cxFilter, cxData,
   cxDataStorage, cxNavigator, cxGridCustomTableView, cxGridTableView, cxGridCustomView, cxClasses,
-  cxGridLevel, cxGrid, Controller.Principal, dxCore, dxUIAClasses, dxDateRanges,
-  dxScrollbarAnnotations, Data.DB, cxDBData, dxCoreGraphics, cxGridDBTableView,
-  dxSkinsForm;
+  cxGridLevel, cxGrid, dxCore, dxUIAClasses, dxDateRanges, dxScrollbarAnnotations, Data.DB, cxDBData,
+  dxCoreGraphics, cxGridDBTableView, dxSkinsForm, Controller.Principal;
 
 type
   TViewPrincipal = class(TForm)
@@ -33,6 +32,7 @@ type
     procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
+    FController: TControllerPrincipal;
   public
     { Public declarations }
   end;
@@ -43,7 +43,7 @@ var
 implementation
 
 uses
-  Infra.LeitorConexoes, Controller.Principal;
+  Infra.LeitorConexoes;
 
 {$R *.dfm}
 
@@ -77,7 +77,7 @@ end;
 procedure TViewPrincipal.FormDestroy(Sender: TObject);
 begin
   if Assigned(FController) then
-    FController.Free;
+    FreeAndNil(FController);
 end;
 
 end.
