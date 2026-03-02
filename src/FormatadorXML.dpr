@@ -3,7 +3,7 @@ program FormatadorXML;
 uses
   Vcl.Forms,
   View.Principal in 'Views\View.Principal.pas' {ViewPrincipal},
-  Infra.Database.Oracle in 'Infra\Infra.Database.Oracle.pas' {DataModule1: TDataModule},
+  Infra.Database.Oracle in 'Infra\Infra.Database.Oracle.pas' {DmOracle: TDmOracle},
   Controller.Principal in 'Controllers\Controller.Principal.pas',
   Model.Conexao in 'Models\Model.Conexao.pas',
   Model.ArquivoXML in 'Models\Model.ArquivoXML.pas',
@@ -21,6 +21,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
-  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TDmOracle, DmOracle);
   Application.Run;
 end.

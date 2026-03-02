@@ -116,6 +116,22 @@ object ViewPrincipal: TViewPrincipal
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
       DataController.Summary.SummaryGroups = <>
+      OptionsView.ColumnAutoWidth = True
+      object colNome: TcxGridDBColumn
+        Caption = 'Nome do Arquivo'
+        DataBinding.ValueType = 'String'
+        Width = 150
+      end
+      object colCaminho: TcxGridDBColumn
+        Caption = 'Caminho Completo'
+        DataBinding.ValueType = 'String'
+        Width = 350
+      end
+      object colStatus: TcxGridDBColumn
+        Caption = 'Status'
+        DataBinding.ValueType = 'String'
+        Width = 150
+      end
     end
     object gridXMLsLvl: TcxGridLevel
       GridView = gridXMLsDBTableView

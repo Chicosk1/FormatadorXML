@@ -10,7 +10,7 @@ uses
   cxButtonEdit, cxLabel, cxProgressBar, cxButtons, cxStyles, cxCustomData, cxFilter, cxData,
   cxDataStorage, cxNavigator, cxGridCustomTableView, cxGridTableView, cxGridCustomView, cxClasses,
   cxGridLevel, cxGrid, dxCore, dxUIAClasses, dxDateRanges, dxScrollbarAnnotations, Data.DB, cxDBData,
-  dxCoreGraphics, cxGridDBTableView, dxSkinsForm, Controller.Principal;
+  dxCoreGraphics, cxGridDBTableView, dxSkinsForm, Controller.Principal, Model.ArquivoXML;
 
 type
   TViewPrincipal = class(TForm)
@@ -27,12 +27,16 @@ type
     cbxConexoes: TcxComboBox;
     lblDiretorio: TcxLabel;
     edtDiretorioXML: TcxButtonEdit;
+    colNome: TcxGridDBColumn;
+    colCaminho: TcxGridDBColumn;
+    colStatus: TcxGridDBColumn;
     procedure edtDiretorioXMLPropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     FController: TControllerPrincipal;
+    procedure AtualizarGridXMLs;
   public
     { Public declarations }
   end;
@@ -47,12 +51,46 @@ uses
 
 {$R *.dfm}
 
+procedure TViewPrincipal.AtualizarGridXMLs;
+var
+  nIndice: Integer;
+  oXML: TModelArquivoXML;
+begin
+  gridXMLsDBTableView.DataController.RecordCount := 0;
+
+  if not Assigned(FController.ListaXMLs) then
+    Exit;
+
+  gridXMLsDBTableView.DataController.BeginUpdate;
+
+  try
+    gridXMLsDBTableView.DataController.RecordCount := FController.ListaXMLs.Count;
+
+    for nIndice := 0 to FController.ListaXMLs.Count - 1 do
+    begin
+      oXML := FController.ListaXMLs[nIndice];
+
+      gridXMLsDBTableView.DataController.Values[nIndice, colNome.Index]    := oXML.NomeArquivo;
+      gridXMLsDBTableView.DataController.Values[nIndice, colCaminho.Index] := oXML.CaminhoCompleto;
+      gridXMLsDBTableView.DataController.Values[nIndice, colStatus.Index]  := oXML.StatusParaTexto;
+    end;
+  finally
+    gridXMLsDBTableView.DataController.EndUpdate;
+  end;
+end;
+
 procedure TViewPrincipal.edtDiretorioXMLPropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
 begin
   dlgSelecionarPasta.Title := 'Selecione a pasta com os arquivos XML';
 
   if dlgSelecionarPasta.Execute then
+  begin
     edtDiretorioXML.Text := dlgSelecionarPasta.FileName;
+
+    FController.CarregarArquivosXML(edtDiretorioXML.Text);
+
+    AtualizarGridXMLs;
+  end;
 end;
 
 procedure TViewPrincipal.FormCreate(Sender: TObject);

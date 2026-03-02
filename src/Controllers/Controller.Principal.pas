@@ -4,18 +4,25 @@ interface
 
 uses
   System.Classes, System.SysUtils, System.Generics.Collections,
-  Model.Conexao, Interfaces.LeitorConexoes;
+  Model.Conexao, Interfaces.LeitorConexoes,
+  Model.ArquivoXML, Service.GerenciadorDiretorio;
 
 type
   TControllerPrincipal = class
   strict private
-    FLeitor: ILeitorConexoes;
+    FLeitor       : ILeitorConexoes;
     FListaConexoes: TObjectList<TModelConexao>;
+    FListaXMLs    : TObjectList<TModelArquivoXML>;
   public
     constructor Create(ALeitor: ILeitorConexoes);
     destructor Destroy; override;
-    procedure CarregarConexoesParaComboBox(const ACaminhoArquivo: string; AItems: TStrings);
-    function ObterConexaoSelecionada(const ANomeConexao: string): TModelConexao;
+
+    procedure CarregarArquivosXML(const AcCaminhoPasta: string);
+    procedure CarregarConexoesParaComboBox(const AcCaminhoArquivo: string; AItems: TStrings);
+
+    function ObterConexaoSelecionada(const AcNomeConexao: string): TModelConexao;
+
+    property ListaXMLs: TObjectList<TModelArquivoXML> read FListaXMLs;
   end;
 
 implementation
@@ -33,10 +40,21 @@ begin
   if Assigned(FListaConexoes) then
     FListaConexoes.Free;
 
+  if Assigned(FListaXMLs) then
+    FListaXMLs.Free;
+
   inherited;
 end;
 
-procedure TControllerPrincipal.CarregarConexoesParaComboBox(const ACaminhoArquivo: string; AItems: TStrings);
+procedure TControllerPrincipal.CarregarArquivosXML(const AcCaminhoPasta: string);
+begin
+  if Assigned(FListaXMLs) then
+    FreeAndNil(FListaXMLs);
+
+  FListaXMLs := TGerenciadorDiretorio.ListarArquivosXML(AcCaminhoPasta);
+end;
+
+procedure TControllerPrincipal.CarregarConexoesParaComboBox(const AcCaminhoArquivo: string; AItems: TStrings);
 var
   LConexao: TModelConexao;
 begin
@@ -45,7 +63,7 @@ begin
   if Assigned(FListaConexoes) then
     FreeAndNil(FListaConexoes);
 
-  FListaConexoes := FLeitor.CarregarConexoes(ACaminhoArquivo);
+  FListaConexoes := FLeitor.CarregarConexoes(AcCaminhoArquivo);
 
   for LConexao in FListaConexoes do
   begin
@@ -53,7 +71,7 @@ begin
   end;
 end;
 
-function TControllerPrincipal.ObterConexaoSelecionada(const ANomeConexao: string): TModelConexao;
+function TControllerPrincipal.ObterConexaoSelecionada(const AcNomeConexao: string): TModelConexao;
 var
   LConexao: TModelConexao;
 begin
@@ -64,7 +82,7 @@ begin
 
   for LConexao in FListaConexoes do
   begin
-    if LConexao.NomeConexao.Equals(ANomeConexao) then
+    if LConexao.NomeConexao.Equals(AcNomeConexao) then
       Exit(LConexao);
   end;
 end;
