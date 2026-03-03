@@ -80,3 +80,38 @@ __recovery/
 
 # Boss dependency manager vendor folder https://github.com/HashLoad/boss
 modules/
+
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+ENV/
+
+# Arquivos compilados em cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ferramentas de empacotamento e distribuição
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+# Arquivos de log e banco de dados temporários
+*.log
+*.sqlite3
+
+# Arquivos de ambiente e chaves (Segurança)
+.env
+.env.local

@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+    <infNFe versao="4.00" Id="NFe42240431565104012000551290000014421294144967">
+      <ide>
+        <cUF>42</cUF>
+        <cNF>29414496</cNF>
+        <natOp>BONIFICACAO</natOp>
+        <mod>55</mod>
+        <serie>129</serie>
+        <nNF>1442</nNF>
+        <dhEmi>2024-04-02T09:24:25-03:00</dhEmi>
+        <dhSaiEnt>2024-04-02T09:24:25-03:00</dhSaiEnt>
+        <tpNF>1</tpNF>
+        <idDest>1</idDest>
+        <cMunFG>4205902</cMunFG>
+        <tpImp>3</tpImp>
+        <tpEmis>1</tpEmis>
+        <cDV>7</cDV>
+        <tpAmb>1</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>0</indFinal>
+        <indPres>5</indPres>
+        <procEmi>0</procEmi>
+        <verProc>1.0.0</verProc>
+        <NFref>
+          <refNFe>42240331565104012000550010002436621369287088</refNFe>
+        </NFref>
+        <NFref>
+          <refNFe>42240331565104012000550010002436631785075035</refNFe>
+        </NFref>
+        <NFref>
+          <refNFe>42240331565104012000550010002439301009843020</refNFe>
+        </NFref>
+        <NFref>
+          <refNFe>42240331565104012000550010002441171035169224</refNFe>
+        </NFref>
+        <NFref>
+          <refNFe>42240331565104012000550010002441281682222386</refNFe>
+        </NFref>
+        <NFref>
+          <refNFe>42240331565104012000550010002441321293970899</refNFe>
+        </NFref>
+        <NFref>
+          <refNFe>42240331565104012000550010002444791149071427</refNFe>
+        </NFref>
+      </ide>
+      <emit>
+        <CNPJ>03900706000106</CNPJ>
+        <xNome>NOVO SUPERMERCADO TESTE LTDA</xNome>
+        <xFant>POSTO DE MOLAS DO GALEGO</xFant>
+        <enderEmit>
+          <xLgr>ROD Rodovia Ingo Hering lado par</xLgr>
+          <nro>4800</nro>
+          <xCpl>GALPAO B</xCpl>
+          <xBairro>BAIRRO DAS INDUSTRIAS</xBairro>
+          <cMun>4205902</cMun>
+          <xMun>GASPAR</xMun>
+          <UF>SC</UF>
+          <CEP>89117080</CEP>
+          <cPais>1058</cPais>
+          <xPais>BRASIL</xPais>
+          <fone>4732363100</fone>
+        </enderEmit>
+        <IE>250633051</IE>
+        <CRT>3</CRT>
+      </emit>
+      <dest>
+        <CNPJ>40900424000127</CNPJ>
+        <xNome>NOVO SUPERMERCADO TESTE LTDA</xNome>
+        <enderDest>
+          <xLgr>AV 26 DE ABRIL</xLgr>
+          <nro>219</nro>
+          <xBairro>BAIRRO DAS INDUSTRIAS</xBairro>
+          <cMun>4209151</cMun>
+          <xMun>JOSE BOITEUX</xMun>
+          <UF>SC</UF>
+          <CEP>89145000</CEP>
+          <cPais>1058</cPais>
+          <xPais>BRASIL</xPais>
+        </enderDest>
+        <indIEDest>1</indIEDest>
+        <IE>250296314</IE>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>196572</cProd>
+          <cEAN>7896214532504</cEAN>
+          <xProd>NOVO PRODUTO DO BANCO ORACLE</xProd>
+          <NCM>20079910</NCM>
+          <indEscala>S</indEscala>
+          <CFOP>6102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>99.99</vUnCom>
+          <vProd>99.99</vProd>
+          <cEANTrib>7896214532504</cEANTrib>
+          <uTrib>UN</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>15.0000000000</vUnTrib>
+          <indTot>1</indTot>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMS00>
+              <orig>0</orig>
+              <CST>00</CST>
+              <modBC>3</modBC>
+              <vBC>0</vBC>
+              <pICMS>0</pICMS>
+              <vICMS>0</vICMS>
+            </ICMS00>
+          </ICMS>
+          <IPI>
+            <cEnq>999</cEnq>
+            <IPINT>
+              <CST>51</CST>
+            </IPINT>
+          </IPI>
+          <PIS>
+            <PISOutr>
+              <CST>50</CST>
+              <vBC>0</vBC>
+              <pPIS>0.0000</pPIS>
+              <vPIS>0</vPIS>
+            </PISOutr>
+          </PIS>
+          <COFINS>
+            <COFINSOutr>
+              <CST>50</CST>
+              <vBC>0</vBC>
+              <pCOFINS>0.0000</pCOFINS>
+              <vCOFINS>0</vCOFINS>
+            </COFINSOutr>
+          </COFINS>
+        </imposto>
+        <infAdProd>Desc: R$ 0.00</infAdProd>
+      </det>
+      <total>
+        <ICMSTot>
+          <vBC>0</vBC>
+          <vICMS>2.55</vICMS>
+          <vICMSDeson>0.00</vICMSDeson>
+          <vFCP>0.00</vFCP>
+          <vBCST>0.00</vBCST>
+          <vST>0.00</vST>
+          <vFCPST>0.00</vFCPST>
+          <vFCPSTRet>0.00</vFCPSTRet>
+          <vProd>99.99</vProd>
+          <vFrete>0.00</vFrete>
+          <vSeg>0.00</vSeg>
+          <vDesc>0</vDesc>
+          <vII>0.00</vII>
+          <vIPI>0.00</vIPI>
+          <vIPIDevol>0.00</vIPIDevol>
+          <vPIS>0.87</vPIS>
+          <vCOFINS>4.01</vCOFINS>
+          <vOutro>0.00</vOutro>
+          <vNF>0</vNF>
+        </ICMSTot>
+      </total>
+      <transp>
+        <modFrete>4</modFrete>
+        <veicTransp>
+          <placa>FEI9D04</placa>
+          <UF>SP</UF>
+        </veicTransp>
+        <vol>
+          <qVol>15</qVol>
+          <esp>UN</esp>
+          <pesoL>0.621</pesoL>
+          <pesoB>0.653</pesoB>
+        </vol>
+      </transp>
+      <cobr>
+        <fat>
+          <nFat>9723683460</nFat>
+          <vOrig>15,00</vOrig>
+          <vDesc>0.00</vDesc>
+          <vLiq>15,00</vLiq>
+        </fat>
+        <dup>
+          <nDup>001</nDup>
+          <dVenc>2024-12-31</dVenc>
+          <vDup>15,00</vDup>
+        </dup>
+      </cobr>
+      <pag>
+        <detPag>
+          <indPag>1</indPag>
+          <tPag>15</tPag>
+          <vPag>15.00</vPag>
+        </detPag>
+      </pag>
+      <infAdic>
+        <infCpl>Bruto: R$ 38.67; Desc1: R$ 0.00; Desc2: R$ 0.00; NF AUTORIZADA TERMO DE CONCESSÃO Nº 20 5000003201893 / TTD 135000000282264 - PROCESSO SEF 42570/2009 - VIGENCIA: 05/2021; NF remessa 243662 de 15-03-2024</infCpl>
+      </infAdic>
+      <infRespTec>
+        <CNPJ>17921427000125</CNPJ>
+        <xContato>Raphael Colferai</xContato>
+        <email>produtos@invoisys.com.br</email>
+        <fone>1155051788</fone>
+      </infRespTec>
+    </infNFe>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+        <Reference URI="#NFe42240431565104012000551290000014421294144967">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+          <DigestValue>2zBayljmPq4vmAdlcRUcGmX2lyk=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>k+gH87aLsxK05jb9KbUCFu3rkJOgMq3gFmJEBNBbXj8ccgS1nA5bX6ms0UKnWIunDPkPagU5JTd8ygSY7zFmMJTB9XAvKG3S0aHiZHA7OdwHWyfVz5+6ZvtEaNIHUQFXXylb2llUpyo00It9WcDIFu+bQ2aG1QAJEWwbOSz9mc7U6W3qgmSvmWuMK9UpxAjy+9XEstGt2O2Hkqyjd97njGPy9jUrg1IugsEkEfqIj9ch+Y0Pv4r+gXJaDdWgy1COnFUWVDSPDJmbL6fQxkGvjagbeSZd5u8lOtQpEIoWySg8SYq9ZQqy1B3ufkzxuJiCl5zFLWq8K3R4DyFqel9TfA==</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>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</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+  </NFe>
+  <protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>SVRS202403200850</verAplic>
+      <chNFe>42240431565104012000551290000014421294144967</chNFe>
+      <dhRecbto>2024-04-02T09:24:30-03:00</dhRecbto>
+      <nProt>342240085394835</nProt>
+      <digVal>2zBayljmPq4vmAdlcRUcGmX2lyk=</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>
