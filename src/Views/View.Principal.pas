@@ -33,6 +33,7 @@ type
     procedure edtDiretorioXMLPropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure btnProcessarClick(Sender: TObject);
   private
     { Private declarations }
     FController: TControllerPrincipal;
@@ -47,7 +48,9 @@ var
 implementation
 
 uses
-  Infra.LeitorConexoes;
+  Infra.LeitorConexoes,
+  Model.Conexao,
+  Controller.Processamento;
 
 {$R *.dfm}
 
@@ -76,6 +79,57 @@ begin
     end;
   finally
     gridXMLsDBTableView.DataController.EndUpdate;
+  end;
+end;
+
+procedure TViewPrincipal.btnProcessarClick(Sender: TObject);
+var
+  oConexaoSelecionada: TModelConexao;
+  oControllerProcessamento: TControllerProcessamento;
+begin
+  if (not Assigned(FController.ListaXMLs)) or (FController.ListaXMLs.Count = 0) then
+  begin
+    ShowMessage('Não há arquivos XMLs carregados para processar.');
+    Exit;
+  end;
+
+  oConexaoSelecionada := FController.ObterConexaoSelecionada(cbxConexoes.Text);
+  if not Assigned(oConexaoSelecionada) then
+  begin
+    ShowMessage('Selecione uma conexão de banco de dados válida no topo da tela.');
+    Exit;
+  end;
+
+  btnProcessar.Enabled := False;
+  Screen.Cursor        := crHourGlass;
+
+  pbProgresso.Properties.Max := FController.ListaXMLs.Count;
+  pbProgresso.Position := 0;
+
+  oControllerProcessamento := TControllerProcessamento.Create;
+  try
+    oControllerProcessamento.ProcessarLote(
+      FController.ListaXMLs,
+      oConexaoSelecionada,
+      procedure(AnIndiceLinha: Integer; AcStatusTexto: string)
+      begin
+        gridXMLsDBTableView.DataController.Values[AnIndiceLinha, colStatus.Index] := AcStatusTexto;
+
+        if (AcStatusTexto = 'Formatado com Sucesso') or (AcStatusTexto = 'Erro na Validação') then
+          pbProgresso.Position := pbProgresso.Position + 1;
+
+        Application.ProcessMessages;
+      end
+    );
+
+    ShowMessage('Processamento em lote concluído com sucesso!');
+
+  finally
+    oControllerProcessamento.Free;
+
+    btnProcessar.Enabled := True;
+    Screen.Cursor        := crDefault;
+    pbProgresso.Position := 0;
   end;
 end;
 

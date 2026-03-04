@@ -84,6 +84,7 @@ object ViewPrincipal: TViewPrincipal
       Align = alRight
       Caption = 'Processar XMLs'
       TabOrder = 0
+      OnClick = btnProcessarClick
     end
     object pbProgresso: TcxProgressBar
       AlignWithMargins = True
