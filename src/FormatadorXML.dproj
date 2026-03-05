@@ -122,6 +122,11 @@
         <DCCReference Include="Interfaces\Interfaces.LeitorConexoes.pas"/>
         <DCCReference Include="FormatadorXML.dxSettings.pas"/>
         <DCCReference Include="Infra\Infra.Criptografia.pas"/>
+        <DCCReference Include="Interfaces\Interfaces.PythonBridge.pas"/>
+        <DCCReference Include="Interfaces\Interfaces.GeradorJSON.pas"/>
+        <DCCReference Include="Infra\Infra.GeradorJSON.pas"/>
+        <DCCReference Include="Interfaces\Interfaces.ExtratorDados.pas"/>
+        <DCCReference Include="Controllers\Controller.Processamento.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

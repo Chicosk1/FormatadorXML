@@ -3,7 +3,7 @@ unit Service.ExtratorDados;
 interface
 
 uses
-  System.SysUtils, System.IOUtils,
+  System.SysUtils, System.IOUtils, Data.DB, Data.SqlExpr,
   Interfaces.ExtratorDados, Interfaces.PythonBridge, Interfaces.GeradorJSON;
 
 type
@@ -19,7 +19,7 @@ type
 implementation
 
 uses
-  Infra.GeradorJSON;
+  Infra.GeradorJSON, Infra.Database.Oracle;
 
 { TExtratorDados }
 
@@ -32,44 +32,47 @@ end;
 function TExtratorDados.ProcessarNotaFiscal(const AcCaminhoXMLEntrada, AcCaminhoXMLSaida, AcChaveBuscaOracle: string): Boolean;
 var
   oGeradorJSON: IGeradorJSON;
+  oQuery: TSQLQuery;
   cCaminhoJSONTemp: string;
   bSucessoPython: Boolean;
-
-  // Variáveis para receber os dados do banco (Exemplos)
-  cNomeClienteOracle: string;
-  cBairroClienteOracle: string;
-  // cValorProdutoOracle: string;
 begin
   Result := False;
 
   cCaminhoJSONTemp := TPath.Combine(TPath.GetTempPath, 'dados_oracle_' + AcChaveBuscaOracle + '.json');
 
   try
-    // =========================================================================
-    // 2. BUSCA NO ORACLE (Aqui você conecta o seu TDataModule)
-    // =========================================================================
-    // Exemplo de como ficará o seu código:
-    // oMeuDataModule.QueryNota.Close;
-    // oMeuDataModule.QueryNota.ParamByName('CHAVE').AsString := AcChaveBuscaOracle;
-    // oMeuDataModule.QueryNota.Open;
+    try
+      oQuery.SQLConnection := DmOracle.DmConexaoOracle;
 
-    // Simulando o retorno do banco para o nosso teste:
-    cNomeClienteOracle := 'CLIENTE NOVO VINDO DO ORACLE LTDA';
-    cBairroClienteOracle := 'BAIRRO INDUSTRIAL';
+      oQuery.SQL.Text := '';
+      oQuery.ParamByName('CHAVE').AsString := AcChaveBuscaOracle;
+      oQuery.Open;
 
-    oGeradorJSON := TGeradorJSON.Create;
+      oGeradorJSON := TGeradorJSON.Create;
 
-    oGeradorJSON
-      .AdicionarTag('xNome', cNomeClienteOracle)
-      .AdicionarTag('xBairro', cBairroClienteOracle)
-      // Se houvessem vários produtos: .AdicionarTagLista('vProd', oDataModule.RetornarArrayDePrecos)
-      .SalvarEmArquivo(cCaminhoJSONTemp);
+      if not oQuery.IsEmpty then
+      begin
+        oGeradorJSON.AdicionarTag('xNome'  , oQuery.FieldByName('xNome').AsString  )
+                    .AdicionarTag('xBairro', oQuery.FieldByName('xBairro').AsString);
+      end;
 
-    bSucessoPython := FoPythonBridge.FormatarXML(AcCaminhoXMLEntrada, cCaminhoJSONTemp, AcCaminhoXMLSaida);
+      oGeradorJSON.SalvarEmArquivo(cCaminhoJSONTemp);
 
-    Result := bSucessoPython;
+      bSucessoPython := FoPythonBridge.FormatarXML(AcCaminhoXMLEntrada, cCaminhoJSONTemp, AcCaminhoXMLSaida);
 
+      Result := bSucessoPython;
+    except
+      on oErro: Exception do
+      begin
+        Result := False;
+      end;
+    end;
   finally
+    if oQuery.Active then
+      oQuery.Close;
+
+    FreeAndNil(oQuery);
+
     if TFile.Exists(cCaminhoJSONTemp) then
       TFile.Delete(cCaminhoJSONTemp);
   end;
