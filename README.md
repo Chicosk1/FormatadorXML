@@ -52,3 +52,52 @@ venv\Scripts\activate
 
 # Instale as dependências contidas no requirements.txt
 pip install -r requirements.txt
+```
+
+### 2. Configuração do Arquivo de Conexões (.conexoes)
+O sistema lê parâmetros do banco a partir de um arquivo `FormatadorXML.conexoes` no padrão INI. 
+Coloque este arquivo na raiz de execução ou no diretório mapeado. 
+
+Exemplo de estrutura:
+```ini
+[NOME_DO_CLIENTE]
+DriverName=DevartOracleDirect
+Database=127.0.0.1:30100:ORCL
+User_Name=VIASOFTMERC
+Password=330370080770270981721821921721821921721821921721821921721821921721821921721620580960470980760861921721821921721821921721821921721821921721821921721821120660
+```
+
+### 3. Compilação (Delphi)
+1. Abra o arquivo `FormatadorXML.dproj` em uma IDE Delphi compatível.
+2. Certifique-se de que as bibliotecas DevExpress estão instaladas no seu ambiente.
+3. Compile o projeto para a plataforma alvo (Win32/Win64).
+
+---
+
+## 4. 🚀 Como Usar
+
+1. Execute o `FormatadorXML.exe`.
+2. No painel superior, selecione a **Conexão de Banco** desejada.
+3. No campo **Diretório dos XMLs**, navegue até a pasta base que contém os XMLs a serem formatados. O Grid será carregado imediatamente.
+4. Clique em **Processar XMLs**.
+5. Acompanhe a barra de progresso e o status no Grid sendo atualizados em tempo real (MVC Callbacks).
+6. Os arquivos resultantes estarão em uma subpasta chamada `Formatados` dentro do diretório original escolhido.
+
+---
+
+## 5. 🛠️ Manutenção da Engenharia Reversa (Mapeamento de Tags)
+Para adicionar uma nova tag na regra de substituição (Ex: Inserir um CFOP novo):
+
+1. Vá até a unit `Service.ExtratorDados.pas` no Delphi.
+2. Adicione a coluna necessária no `SELECT` da instrução `TSQLQuery`.
+3. Utilize a *Fluent Interface* do `GeradorJSON` para incluir a tag mapeando o retorno do banco:
+
+```pascal
+oGeradorJSON
+  .AdicionarTag('xNome'        , oQuery.FieldByName('xNome').AsString          )
+  .AdicionarTag('NOVA_TAG_AQUI', oQuery.FieldByName('NOVA_COLUNA_SQL').AsString);
+```
+4. Apenas compile o projeto Delphi. O script Python processará a nova regra de forma 100% dinâmica e automática.
+
+---
+📝 *Desenvolvido com foco em escalabilidade, manutenibilidade e Clean Architecture.*
