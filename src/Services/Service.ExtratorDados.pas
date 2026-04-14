@@ -31,8 +31,8 @@ end;
 
 function TExtratorDados.ProcessarNotaFiscal(const AcCaminhoXMLEntrada, AcCaminhoXMLSaida, AcChaveBuscaOracle: string): Boolean;
 var
-  oGeradorJSON: IGeradorJSON;
-  oQuery: TSQLQuery;
+  oGeradorJSON, oJsonDest, oJsonEnderDest: IGeradorJSON;
+  oQueryDest, oQueryEnderDest: TSQLQuery;
   cCaminhoJSONTemp: string;
   bSucessoPython: Boolean;
 begin
@@ -40,24 +40,39 @@ begin
 
   cCaminhoJSONTemp := TPath.Combine(TPath.GetTempPath, 'dados_oracle_' + AcChaveBuscaOracle + '.json');
 
+  oQueryDest      := TSQLQuery.Create(nil);
+  oQueryEnderDest := TSQLQuery.Create(nil);
+
   try
     try
-      oQuery.SQLConnection := DmOracle.DmConexaoOracle;
+      oQueryDest.SQLConnection      := DmOracle.DmConexaoOracle;
+      oQueryEnderDest.SQLConnection := DmOracle.DmConexaoOracle;
 
-      oQuery.SQL.Text := '';
-      oQuery.ParamByName('CHAVE').AsString := AcChaveBuscaOracle;
-      oQuery.Open;
+      // Consultas no banco de dados
 
       oGeradorJSON := TGeradorJSON.Create;
 
-      if not oQuery.IsEmpty then
-      begin
-        oGeradorJSON.AdicionarTag('xNome'  , oQuery.FieldByName('xNome').AsString  )
-                    .AdicionarTag('xBairro', oQuery.FieldByName('xBairro').AsString);
-      end;
+      oJsonEnderDest := TGeradorJSON.Create;
+      oJsonEnderDest.AdicionarTag('xLgr'   , oQueryEnderDest.FieldByName('LOGRADOURO').AsString   )
+                    .AdicionarTag('nro'    , oQueryEnderDest.FieldByName('NUMERO').AsString       )
+                    .AdicionarTag('xCpl'   , oQueryEnderDest.FieldByName('COMPLEMENTO').AsString  )
+                    .AdicionarTag('xBairro', oQueryEnderDest.FieldByName('BAIRRO').AsString       )
+                    .AdicionarTag('cMun'   , oQueryEnderDest.FieldByName('COD_MUNICIPIO').AsString)
+                    .AdicionarTag('xMun'   , oQueryEnderDest.FieldByName('MUNICIPIO').AsString    )
+                    .AdicionarTag('UF'     , oQueryEnderDest.FieldByName('UF').AsString           )
+                    .AdicionarTag('CEP'    , oQueryEnderDest.FieldByName('CEP').AsString          )
+                    .AdicionarTag('fone'   , oQueryEnderDest.FieldByName('TELEFONE').AsString     );
+
+      oJsonDest := TGeradorJSON.Create;
+      oJsonDest.AdicionarTag    ('CNPJ'     , oQueryDest.FieldByName('CNPJ').AsString              )
+                .AdicionarTag   ('xNome'    , oQueryDest.FieldByName('RAZAO_SOCIAL').AsString      )
+                .AdicionarTag   ('IE'       , oQueryDest.FieldByName('INSCRICAO_ESTADUAL').AsString)
+                .AdicionarTag   ('email'    , oQueryDest.FieldByName('EMAIL_CONTATO').AsString     )
+                .AdicionarObjeto('enderDest', oJsonEnderDest                                       );
+
+      oGeradorJSON.AdicionarObjeto('dest', oJsonDest);
 
       oGeradorJSON.SalvarEmArquivo(cCaminhoJSONTemp);
-
       bSucessoPython := FoPythonBridge.FormatarXML(AcCaminhoXMLEntrada, cCaminhoJSONTemp, AcCaminhoXMLSaida);
 
       Result := bSucessoPython;
@@ -68,13 +83,13 @@ begin
       end;
     end;
   finally
-    if oQuery.Active then
-      oQuery.Close;
+    if oQueryDest.Active      then oQueryDest.Close;
+    if oQueryEnderDest.Active then oQueryEnderDest.Close;
 
-    FreeAndNil(oQuery);
+    if TFile.Exists(cCaminhoJSONTemp) then TFile.Delete(cCaminhoJSONTemp);
 
-    if TFile.Exists(cCaminhoJSONTemp) then
-      TFile.Delete(cCaminhoJSONTemp);
+    FreeAndNil(oQueryDest);
+    FreeAndNil(oQueryEnderDest);
   end;
 end;
 

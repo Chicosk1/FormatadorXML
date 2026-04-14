@@ -8,8 +8,10 @@ type
 
     function AdicionarTag(const AcNomeTag, AcValor: string): IGeradorJSON;
     function AdicionarTagLista(const AcNomeTag: string; const AoValores: TArray<string>): IGeradorJSON;
+    function AdicionarObjeto(const AcNomeObjeto: string; const AoGeradorFilho: IGeradorJSON): IGeradorJSON;
     function SalvarEmArquivo(const AcCaminhoArquivo: string): Boolean;
     function ObterJSONString: string;
+    function ObterJSONObject: TObject;
   end;
 
 implementation

@@ -15,9 +15,11 @@ type
 
     function AdicionarTag(const AcNomeTag, AcValor: string): IGeradorJSON;
     function AdicionarTagLista(const AcNomeTag: string; const AoValores: TArray<string>): IGeradorJSON;
+    function AdicionarObjeto(const AcNomeObjeto: string; const AoGeradorFilho: IGeradorJSON): IGeradorJSON;
 
     function SalvarEmArquivo(const AcCaminhoArquivo: string): Boolean;
     function ObterJSONString: string;
+    function ObterJSONObject: TObject;
   end;
 
 implementation
@@ -62,9 +64,20 @@ begin
   Result := Self;
 end;
 
+function TGeradorJSON.AdicionarObjeto(const AcNomeObjeto: string; const AoGeradorFilho: IGeradorJSON): IGeradorJSON;
+begin
+  FoJSONObject.AddPair(AcNomeObjeto, TJSONObject(AoGeradorFilho.ObterJSONObject).Clone as TJSONObject);
+  Result := Self;
+end;
+
 function TGeradorJSON.ObterJSONString: string;
 begin
   Result := FoJSONObject.ToString;
+end;
+
+function TGeradorJSON.ObterJSONObject: TObject;
+begin
+  Result := FoJSONObject;
 end;
 
 function TGeradorJSON.SalvarEmArquivo(const AcCaminhoArquivo: string): Boolean;
