@@ -1,0 +1,843 @@
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe">
+	<NFe>
+		<infNFe Id="NFe52210409483773000140550010017540971205201920" versao="4.00">
+			<ide>
+				<cUF>52</cUF>
+				<cNF>20520192</cNF>
+				<natOp>VENDA DE MERC. ADQUIRIDA OU RECEBIDA DE TERCEIROS</natOp>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>1754097</nNF>
+				<dhEmi>2021-04-09T16:09:00-03:00</dhEmi>
+				<dhSaiEnt>2021-04-12T16:09:00-03:00</dhSaiEnt>
+				<tpNF>1</tpNF>
+				<idDest>1</idDest>
+				<cMunFG>5201405</cMunFG>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>0</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>0</indFinal>
+				<indPres>9</indPres>
+				<procEmi>0</procEmi>
+				<verProc>1.3.187</verProc>
+			</ide>
+			<emit>
+				<CNPJ>18612739000110</CNPJ>
+				<xNome>REFIL DISTRIBUICAO E LOGISTICA LTDA</xNome>
+				<xFant>REFIL DISTRIBUICAO E LOGISTICA LTDA</xFant>
+				<enderEmit>
+					<xLgr>RUA 9 S/N (MODULO 01 A 05) - BOX 02</xLgr>
+					<nro>0</nro>
+					<xBairro>POLO EMPRESARIAL GOI</xBairro>
+					<cMun>5201405</cMun>
+					<xMun>APARECIDA DE GOIANIA</xMun>
+					<UF>GO</UF>
+					<CEP>74985130</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>06232193000</fone>
+				</enderEmit>
+				<IE>104355700</IE>
+				<CRT>3</CRT>
+			</emit>
+			<dest>
+				<CNPJ>19445733001130</CNPJ>
+				<xNome>ATACAREJO MATOS E RUFINO LTDA</xNome>
+				<enderDest>
+					<xLgr>R JOSE FERREIRA GOMES QD06 LT A</xLgr>
+					<nro>143</nro>
+					<xCpl>QUADRA06 LOTE A</xCpl>
+					<xBairro>CENTRO</xBairro>
+					<cMun>5219308</cMun>
+					<xMun>SANTA HELENA DE GOIAS</xMun>
+					<UF>GO</UF>
+					<CEP>75920000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>6436224567</fone>
+				</enderDest>
+				<indIEDest>1</indIEDest>
+				<IE>108295745</IE>
+				<email>atividadecontabil@hotmail.com</email>
+			</dest>
+			<entrega>
+				<CNPJ>40900424000127</CNPJ>
+				<xLgr>R JOSE FERREIRA GOMES QD06 LT A</xLgr>
+				<nro>143</nro>
+				<xCpl>QUADRA06 LOTE A</xCpl>
+				<xBairro>CENTRO</xBairro>
+				<cMun>5219308</cMun>
+				<xMun>SANTA HELENA DE GOIAS</xMun>
+				<UF>GO</UF>
+				<CEP>75920000</CEP>
+			</entrega>
+			<det nItem="1">
+				<prod>
+					<cProd>12254</cProd>
+					<cEAN>7891132019403</cEAN>
+					<xProd>SAZON TEMP AMARELO</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>7891132019403</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>1</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: CC235655-94CE-493E-A064-B6FE73403E39</infAdProd>
+			</det>
+			<det nItem="2">
+				<prod>
+					<cProd>12264</cProd>
+					<cEAN>7891132000449</cEAN>
+					<xProd>SAZON TEMP BRANCO</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>17891132000446</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>2</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: B9E7CCE5-B1F4-49CD-AFAA-3CEC2AF3C8B6</infAdProd>
+			</det>
+			<det nItem="3">
+				<prod>
+					<cProd>12255</cProd>
+					<cEAN>7891132019717</cEAN>
+					<xProd>SAZON TEMP LARANJA</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>7891132019717</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>3</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: BDC6D9C6-97FD-4ABE-BE80-3CC9A7C5BAF1</infAdProd>
+			</det>
+			<det nItem="4">
+				<prod>
+					<cProd>12256</cProd>
+					<cEAN>7891132019724</cEAN>
+					<xProd>SAZON TEMP MARROM</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>7891132019724</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>4</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: 247931C0-F616-481D-8EC4-EF61A79CF758</infAdProd>
+			</det>
+			<det nItem="5">
+				<prod>
+					<cProd>12266</cProd>
+					<cEAN>7891132001101</cEAN>
+					<xProd>SAZON TEMP NORDESTE</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>7891132001101</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>5</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: 9ABAD6D6-B480-408E-866A-985B50ADB1F4</infAdProd>
+			</det>
+			<det nItem="6">
+				<prod>
+					<cProd>12274</cProd>
+					<cEAN>7891132008698</cEAN>
+					<xProd>SAZON TEMP TOQUE DE ALHO</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>144.0000</qCom>
+					<vUnCom>2.8940277778</vUnCom>
+					<vProd>416.74</vProd>
+					<cEANTrib>7891132008698</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>144.0000</qTrib>
+					<vUnTrib>2.8940277778</vUnTrib>
+					<vOutro>0.07</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>6</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>80.22</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>269.72</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>45.85</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>416.81</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>6.88</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>416.81</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>31.68</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 80.22 PERC.PARC.FCI: 0 - N. FCI: 31C82777-CA96-4150-9CD0-1402445F3841</infAdProd>
+			</det>
+			<det nItem="7">
+				<prod>
+					<cProd>12275</cProd>
+					<cEAN>7891132008704</cEAN>
+					<xProd>SAZON TEMP TOQUE DE LIMAO</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>7891132008704</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>7</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: F6289FB0-A703-4777-9676-72AB2EE43990</infAdProd>
+			</det>
+			<det nItem="8">
+				<prod>
+					<cProd>12252</cProd>
+					<cEAN>7891132019274</cEAN>
+					<xProd>SAZON TEMP VERDE</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>480.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>1389.12</vProd>
+					<cEANTrib>7891132019274</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>480.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.24</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>8</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>267.41</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>899.05</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>152.84</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>1389.36</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>22.92</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>1389.36</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>105.59</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 267.41 PERC.PARC.FCI: 0 - N. FCI: A1552199-56E2-41D2-8B21-179CE0F7A77A</infAdProd>
+			</det>
+			<det nItem="9">
+				<prod>
+					<cProd>12253</cProd>
+					<cEAN>7891132019281</cEAN>
+					<xProd>SAZON TEMP VERMELHO</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>2400.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>6945.60</vProd>
+					<cEANTrib>7891132019281</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>2400.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>1.26</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>9</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>1337.03</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>4495.31</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>764.20</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>6946.86</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>114.62</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>6946.86</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>527.96</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 1337.03 PERC.PARC.FCI: 0 - N. FCI: 16AE8380-B2C9-4E54-8D01-CB85AE8384AB</infAdProd>
+			</det>
+			<det nItem="10">
+				<prod>
+					<cProd>12257</cProd>
+					<cEAN>7891132019731</cEAN>
+					<xProd>SAZON TEMP SALADA</xProd>
+					<NCM>21039021</NCM>
+					<CEST>1703500</CEST>
+					<indEscala>S</indEscala>
+					<CFOP>6102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>240.0000</qCom>
+					<vUnCom>2.8940000000</vUnCom>
+					<vProd>694.56</vProd>
+					<cEANTrib>7891132019731</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>240.0000</qTrib>
+					<vUnTrib>2.8940000000</vUnTrib>
+					<vOutro>0.12</vOutro>
+					<indTot>1</indTot>
+					<xPed>3447500088</xPed>
+					<nItemPed>10</nItemPed>
+				</prod>
+				<imposto>
+					<vTotTrib>133.70</vTotTrib>
+					<ICMS>
+						<ICMS20>
+							<orig>0</orig>
+							<CST>20</CST>
+							<modBC>3</modBC>
+							<pRedBC>35.2900</pRedBC>
+							<vBC>449.53</vBC>
+							<pICMS>17.0000</pICMS>
+							<vICMS>76.42</vICMS>
+						</ICMS20>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>11.46</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>694.68</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>52.80</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>VL.APROX.TRIB. FEDERAL: 133.70 PERC.PARC.FCI: 0 - N. FCI: 8A85B78E-576C-402D-A2F1-7B74698676CC</infAdProd>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>9313.47</vBC>
+					<vICMS>1497.83</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>14390.10</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>0.00</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>237.47</vPIS>
+					<vCOFINS>1093.87</vCOFINS>
+					<vOutro>2.50</vOutro>
+					<vNF>13615.79</vNF>
+					<vTotTrib>2770.07</vTotTrib>
+				</ICMSTot>
+			</total>
+			<transp>
+				<modFrete>0</modFrete>
+				<vol>
+					<qVol>4956</qVol>
+					<nVol>4956</nVol>
+					<pesoL>306.960</pesoL>
+					<pesoB>363.552</pesoB>
+				</vol>
+			</transp>
+			<cobr>
+				<fat>
+					<nFat>1754097</nFat>
+					<vOrig>13615.79</vOrig>
+					<vDesc>0</vDesc>
+					<vLiq>13615.79</vLiq>
+				</fat>
+				<dup>
+					<nDup>001</nDup>
+					<dVenc>2021-05-27</dVenc>
+					<vDup>13615.79</vDup>
+				</dup>
+			</cobr>
+			<pag>
+				<detPag>
+					<indPag>1</indPag>
+					<tPag>15</tPag>
+					<vPag>13615.79</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infCpl>OPER. CIF FRETE INCLUSO VL MERCADORIA; DISP. EMIS. CRTC-INC II ART 264 RCTE//ICMS FRETE ISENTO INC XLI ART 7 ANEXO IX - RCTE//Total aproximado de tributos federais, estaduais e municipais R$ 2770.09//Praca de Pagamento: APARECIDA DE GOIANIA - GO//NUM. PEDIDO: 3447500088 CARREGAMENTO: 185441 NUM. TRANS.: 3711959//NOME FANTASIA: MEGA SUPERMERCADOS CODIGO: 121471 VL A RECEBER: 14392.60 VL BONIFIC: 0.00//RCA: 3447-EDER DE SOUSA MARTINS FONE1: FONE2: FORMA PAGTO: BANCO BRADESCO-GO PRAZO PAGTO:45 DIAS - GO//OBS ENTREGA: , , ,//OBS PEDIDO://ATENCAO : FAVOR CONFERIR SUA MERCADORIA NO ATO DA ENTREGA. NAO ACEITAMOS RECLAMACOES POSTERIORES////MOTORISTA: 3243 - INTERIOR PROGRAMADO//Valor Fundo Estadual de Combate e Erradicacao a Probreza (FUNCEP): R$ 0//EXCLUSAO DO ICMS NA BASE DE CALCULO DO PIS E COFINS CONFORME PROCESSO/MAND.SEGU N. DE VALOR EXCLUIDO DA BASE DE CALCULO R$ 1583.29//OPER. CIF FRETE INCLUSO VL MERCADORIA DISP. EMIS. CRTCINC II ART 264 RCTE ICMS FRETE ISENTO INC XLI//ART 7 ANEXO IXRCTE</infCpl>
+			</infAdic>
+			<infRespTec>
+				<CNPJ>07577599000501</CNPJ>
+				<xContato>TOTVS BRASILIA SOFTWARE - UNIDADE GOIANIA LTDA</xContato>
+				<email>resp_tecnico_dfe_winthor@totvs.com.br</email>
+				<fone>06232500200</fone>
+			</infRespTec>
+		</infNFe>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#NFe52210409483773000140550010017540971205201920">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>QQuoA9qCwkDnvNp3tUw/EmFThyA=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>GYYVjnotpX7R7KtyD0mLV79ARUEfH1kNeKLt2DhtnvMMG49r9u8EwPLIEqjMHuvinhwVXqelQd6L
+2Kt0a2hEE/qbM73G+kt/xQ9Gp6187j4p/YuZ7ayRQhh4WzSCuuK2S99awAeYVBjLy6M6Rj/r/M92
+dQDSbTCxoqUTnLx1OEnZZ2Vj+kZ65jtGRLHAnry93txpa+tHU3EBdOb/aWYc0WlGMXSqwJigyklX
+128wgmDhBO1XdzO7J2iJawrrHbgtDeW0ZVRbOz4+lBFV9LaEmwnR1qoE1dL9HTkMY2sj1TX4t1Oi
+QZjHoQVYI5VXiEwUmoUDmbCKhSB8gESXajxBrQ==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>MIIITjCCBjagAwIBAgIQVHM//HBPzxufDNjZO5RD1jANBgkqhkiG9w0BAQsFADCBgDELMAkGA1UE
+BhMCQlIxEzARBgNVBAoTCklDUC1CcmFzaWwxNjA0BgNVBAsTLVNlY3JldGFyaWEgZGEgUmVjZWl0
+YSBGZWRlcmFsIGRvIEJyYXNpbCAtIFJGQjEkMCIGA1UEAxMbQUMgSW5zdGl0dXRvIEZlbmFjb24g
+UkZCIEczMB4XDTIxMDIyMzIwNDU1NloXDTIyMDIyMzIwNDU1NlowggEJMQswCQYDVQQGEwJCUjET
+MBEGA1UECgwKSUNQLUJyYXNpbDELMAkGA1UECAwCR08xHTAbBgNVBAcMFEFQQVJFQ0lEQSBERSBH
+T0lBTklBMTYwNAYDVQQLDC1TZWNyZXRhcmlhIGRhIFJlY2VpdGEgRmVkZXJhbCBkbyBCcmFzaWwg
+LSBSRkIxFjAUBgNVBAsMDVJGQiBlLUNOUEogQTExFzAVBgNVBAsMDjM3NjIyNzI3MDAwMTEwMRMw
+EQYDVQQLDApQUkVTRU5DSUFMMTswOQYDVQQDDDJSRUZJTCBESVNUUklCVUlDQU8gRSBMT0dJU1RJ
+Q0EgTFREQTowOTQ4Mzc3MzAwMDE0MDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAPWS
+Hrlp9i/HFffLWeSTqohnnO7fAGb8uHGKxE6U8Re4ufARxYeuYRMJfym0GKblEH0AudT+uTVeHKlR
+sM7XzFo7utQnED/ZXkn00g9tlKeaiyZHkrVA44fiLgbir4bl4vjZ7Z+9vcgBcFKZDD42m6o+ZoWk
+NgV63vcPjB25/IBQtvHPr6ommaPWNaJjbo6vYEPtv+R0/zhERAaJRLeui7BOjnDWuI+c+91nq7AP
+YrqNqMC+XKTHLpkvvimBXkoBXXmNiF5vOt4Cz1lKCRcI5ckx27Xoj0VV/w1JBuIBp+KpF3b7yygG
+WWORfWFIgsLw/QrLM7kxYSsKOdHIKJvm3vUCAwEAAaOCAzYwggMyMIHABgNVHREEgbgwgbWgQgYF
+YEwBAwSgOQQ3MTIwNzE5NzY4NDA3ODUzNzEyMDAwMDAwMDAwMDAwMDAwMDAwMDAzMjk3NDMxMDAw
+MDBTU1BHT6AhBgVgTAEDAqAYBBZTVEFOUkxMRVkgQkFUSVNUQSBSSU9ToBkGBWBMAQMDoBAEDjA5
+NDgzNzczMDAwMTQwoBcGBWBMAQMHoA4EDDAwMDAwMDAwMDAwMIEYbWF5Y29uQGdydXBvZm9rdXMu
+Y29tLmJyMAkGA1UdEwQCMAAwHwYDVR0jBBgwFoAUJseUPXqHfn9LeIqHPeDPtc6psNowgYYGA1Ud
+IAR/MH0wewYGYEwBAgEiMHEwbwYIKwYBBQUHAgEWY2h0dHA6Ly9pY3AtYnJhc2lsLmFjZmVuYWNv
+bi5jb20uYnIvcmVwb3NpdG9yaW8vZHBjL0FDLUluc3RpdHV0by1GZW5hY29uLVJGQi9EUENfQUNf
+SUZlbmFjb25fUkZCLnBkZjCBygYDVR0fBIHCMIG/MF6gXKBahlhodHRwOi8vaWNwLWJyYXNpbC5h
+Y2ZlbmFjb24uY29tLmJyL3JlcG9zaXRvcmlvL2xjci9BQ0luc3RpdHV0b0ZlbmFjb25SRkJHMy9M
+YXRlc3RDUkwuY3JsMF2gW6BZhldodHRwOi8vaWNwLWJyYXNpbC5vdXRyYWxjci5jb20uYnIvcmVw
+b3NpdG9yaW8vbGNyL0FDSW5zdGl0dXRvRmVuYWNvblJGQkczL0xhdGVzdENSTC5jcmwwDgYDVR0P
+AQH/BAQDAgXgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDCBuwYIKwYBBQUHAQEEga4w
+gaswZgYIKwYBBQUHMAKGWmh0dHA6Ly9pY3AtYnJhc2lsLmFjZmVuYWNvbi5jb20uYnIvcmVwb3Np
+dG9yaW8vY2VydGlmaWNhZG9zL0FDX0luc3RpdHV0b19GZW5hY29uX1JGQkczLnA3YzBBBggrBgEF
+BQcwAYY1aHR0cDovL29jc3AtYWMtaW5zdGl0dXRvLWZlbmFjb24tcmZiLmNlcnRpc2lnbi5jb20u
+YnIwDQYJKoZIhvcNAQELBQADggIBAGNdYgIbDVisGokbfM4+1iqyEo8pn+RIhHz+7oYWwAiaxyJI
+kVJlfFAsi523y3LA1WHCtLN+tp90CDGkWaCWFcuZn9OfVyVyn3uKFqCyNbDihG0+UGuEEY4iouVa
+JlTw7sHAMxCHubQh347z3IcM40K2PgHO1qItmTA0eI6si0K0ux0WoBJEwLeNXfRE3z9ka2tFEfV2
+qq2MD/wdGXtTWJi2ooX79tTv7kfX4JHSZqvtxMpepPK5BVbz2NzgVo4fh0YxsudMsHcCbNlBQTxr
+1uV+FLzR9wRq7jG9y3beUulD4hT/iQBcGIN+KYKnZQUybS35noEcW8Hw6HqTGUqxqm6/haMSuUEg
+GbqqhoewSUY2e267dG5cW8l1RMSe4W3iJ2tkShR5B0C9mIKlC7zMUVgt97mlN3tGRi9g7bXVmLFo
+GiG601ENrYBD+5kpXYq4JntXAGgWUG66EQsCfv+9HHQlGPDXnmUQri3tFSelXUH8PoHYdrEknyPn
+DlON7okNs3t3X6oCGoswzprVg+UZhoDAie9DG1e4HVxNULZjxUt1mogFNOnnXFaeJ2yQJxeESxdQ
+oSXhGGqlqE4lxeX3Af9zKzzuWEqi0qRTfvCez9W7aX9NSr11w2OyPZRCR8bx5oV2rkoRsqAlqBgW
+GCVNZHifHW/inwpxprH91Q3OWTp8</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+	<protNFe versao="4.00">
+		<infProt Id="ID152213961654254">
+			<tpAmb>1</tpAmb>
+			<verAplic>0.0.1</verAplic>
+			<chNFe>52210409483773000140550010017540971205201920</chNFe>
+			<dhRecbto>2021-04-09T16:09:12-03:00</dhRecbto>
+			<nProt>152213961654254</nProt>
+			<digVal>QQuoA9qCwkDnvNp3tUw/EmFThyA=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso da NF-e</xMotivo>
+		</infProt>
+	</protNFe>
+</nfeProc>
